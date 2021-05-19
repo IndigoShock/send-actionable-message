@@ -55,19 +55,19 @@ namespace send_actionable_message
                     EmailAddress = new EmailAddress() {
                         // If recipient provided as an argument, use that
                         // If not, use the logged in user
-                        Address = IsValidEmail(args) ? args[0] : me.Mail
+                        Address = "testacc1@actester.onmicrosoft.com"
                     }
                 };
 
                 // Create the message
                 var actionableMessage = new Message()
                 {
-                    Subject = "Actionable message sent from code",
+                    Subject = "AdaptiveCardTest",
                     ToRecipients = new List<Recipient>() { toRecip },
                     Body = new ItemBody()
                     {
                         ContentType = BodyType.Html,
-                        Content = LoadActionableMessageBody()
+                        //Content = LoadActionableMessageBody()
                     },
                     Attachments = new MessageAttachmentsCollectionPage()
                 };
